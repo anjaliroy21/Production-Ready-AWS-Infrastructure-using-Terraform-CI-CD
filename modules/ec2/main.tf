@@ -1,6 +1,6 @@
 resource "aws_launch_template" "app" {
   image_id = "ami-0f5ee92e2d63afc18"
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
   user_data = base64encode(<<-EOF
